@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>YouTube Studio Navbar</title>
+  </head>
+  <body>
+    <div id="splash"></div>
+
+    <!-- ══════════════════════════════
+         NAVBAR
+    ══════════════════════════════ -->
+    <nav class="yt-navbar">
+
+      <!-- Menu button -->
+      <button class="btn-icon" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="currentColor">
+          <path d="M20 5H4a1 1 0 000 2h16a1 1 0 100-2Zm0 6H4a1 1 0 000 2h16a1 1 0 000-2Zm0 6H4a1 1 0 000 2h16a1 1 0 000-2Z" />
+        </svg>
+      </button>
+
+      <!-- Logo -->
+      <a class="logo-area" href="#">
+        <img src="https://i.imgur.com/cdeTFLC.png" alt="YouTube Studio" style="height: 20px; width: auto" />
+      </a>
+
+      <!-- Search -->
+      <div class="search-wrap">
+        <div class="search-inner">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="icon-search">
+            <path d="M11 2a9 9 0 105.641 16.01.966.966 0 00.152.197l3.5 3.5a1 1 0 101.414-1.414l-3.5-3.5a1 1 0 00-.197-.153A8.96 8.96 0 0020 11a9 9 0 00-9-9Zm0 2a7 7 0 110 14 7 7 0 010-14Z" />
+          </svg>
+          <input type="text" placeholder="Pesquise no seu canal" />
+        </div>
+      </div>
+
+      <!-- Right actions -->
+      <div class="right-actions">
+
+        <!-- Help -->
+        <button class="btn-icon" aria-label="Ajuda">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon-help">
+            <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm.5 3h-.483a3.45 3.45 0 00-3.089 1.909l-.323.644a1 1 0 001.79.894l.322-.643a1.46 1.46 0 011.3-.804h.483a1.5 1.5 0 01.153 2.992l-.306.016A1.5 1.5 0 0011 12.5v1a1 1 0 002 0v-.535A3.5 3.5 0 0012.5 6Zm-.5 9.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5Z" />
+          </svg>
+        </button>
+
+        <!-- Notifications -->
+        <div class="bell-wrap">
+          <button class="btn-icon" aria-label="Notificações">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon-bell">
+              <path d="M16 19a4 4 0 11-8 0H4.765C3.21 19 2.25 17.304 3.05 15.97l1.806-3.01A1 1 0 005 12.446V8a7 7 0 0114 0v4.446c0 .181.05.36.142.515l1.807 3.01c.8 1.333-.161 3.029-1.716 3.029H16ZM12 3a5 5 0 00-5 5v4.446a3 3 0 01-.428 1.543L4.765 17h14.468l-1.805-3.01A3 3 0 0117 12.445V8a5 5 0 00-5-5Zm-2 16a2 2 0 104 0h-4Z" />
+            </svg>
+          </button>
+          <span class="badge"></span>
+        </div>
+
+        <!-- Create -->
+        <button class="btn-criar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14 4H4a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3v-1.536l3 1.732c1.333.77 3-.191 3-1.731V8.536c0-1.539-1.667-2.501-3-1.731l-3 1.731V7a3 3 0 00-3-3ZM4 6h10a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1Zm5 2a1 1 0 00-1 1v2H6a1 1 0 000 2h2v2a1 1 0 102 0v-2h2a1 1 0 000-2h-2V9a1 1 0 00-1-1Zm8 2.846 4-2.31v6.929l-4-2.309v-2.31Z" />
+          </svg>
+          Criar
+        </button>
+
+        <!-- Avatar -->
+        <div class="avatar" title="Minha conta">
+          <img src="https://i.imgur.com/DM1kOTO.jpeg" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- ══════════════════════════════
+         SIDEBAR
+    ══════════════════════════════ -->
+    <aside class="sidebar">
+
+      <!-- Channel info -->
+      <div class="channel-box" style="position: relative;">
+        <div class="channel-avatar" style="position: relative; cursor: pointer; width: 110px; height: 110px; overflow: hidden;"
+          onmouseenter="this.querySelector('.avatar-overlay').style.opacity='1'; document.getElementById('ver-canal').style.opacity='1'"
+          onmouseleave="this.querySelector('.avatar-overlay').style.opacity='0'; document.getElementById('ver-canal').style.opacity='0'">
+          <img src="https://i.imgur.com/DM1kOTO.jpeg" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
+          <div class="avatar-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.15s;">
+            <div class="btn-icon" style="width: 40px; height: 40px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M19 5H8a1 1 0 000 2h7.586L5.293 17.293a1 1 0 101.414 1.414L17 8.414V16a1 1 0 002 0V5Z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="channel-name">Seu canal</div>
+        <div class="channel-sub">Nome</div>
+        <p id="ver-canal" style="position: absolute; font-size: 11px; color: #fff; border-radius: 8px; padding: 4px 10px; top: 100px; left: 50%; transform: translateX(-50%); white-space: nowrap; opacity: 0; transition: opacity 0.15s; background: #606060;">Ver canal no YouTube</p>
+      </div>
+
+      <!-- Nav items -->
+      <div class="sidebar-scroll">
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 2H4a2 2 0 00-2 2v7a2 2 0 002 2h5a2 2 0 002-2V4a2 2 0 00-2-2Zm11 0h-5a2 2 0 00-2 2v3a2 2 0 002 2h5a2 2 0 002-2V4a2 2 0 00-2-2ZM4 11V4h5v7H4Zm11-4V4h5v3h-5Zm5 4h-5a2 2 0 00-2 2v7a2 2 0 002 2h5a2 2 0 002-2v-7a2 2 0 00-2-2Zm-5 9v-7h5v7h-5Zm-6-5H4a2 2 0 00-2 2v3a2 2 0 002 2h5a2 2 0 002-2v-3a2 2 0 00-2-2Zm-5 5v-3h5v3H4Z"></path>
+          </svg>
+          Painel
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 2H8a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2ZM8 16V4h12v12H8Zm-4 4V6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2H4Zm13-10-5-3v6l5-3Z"></path>
+          </svg>
+          Conteúdo
+        </a>
+
+        <a href="#" class="sidebar-item active">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 2a2 2 0 00-2 2v16a2 2 0 002 2h16a2 2 0 002-2V4a2 2 0 00-2-2H4Zm7 6a1 1 0 012 0v9h-2V8Zm-3 2a1 1 0 011 1v6H7v-6a1 1 0 011-1Zm8 2a1 1 0 011 1v4h-2v-4a1 1 0 011-1Z"></path>
+          </svg>
+          Analytics
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 3a4 4 0 00-3.25 1.668 6 6 0 011.6 1.202A2 2 0 1118 9l-.084-.002c.112.662.112 1.339.001 2.001A4 4 0 1018 3ZM6 3.001a4 4 0 10.083 8 6 6 0 010-2.001 2 2 0 111.566-3.13A6 6 0 019.25 4.668 4 4 0 006 3.001Zm6 3a4 4 0 100 8 4 4 0 000-8Zm0 2a2 2 0 110 4 2 2 0 010-4Zm-5.656 4.01A6 6 0 000 18a1 1 0 102 0 3.998 3.998 0 015.53-3.694l.057.024.155-.1a6 6 0 01-1.398-2.219ZM18 12c-.115 0-.23.003-.345.01a5.999 5.999 0 01-1.398 2.22l.155.1A3.998 3.998 0 0122 18a1 1 0 002 0 6 6 0 00-6-6Zm-6 3.001a6 6 0 00-6 6 1 1 0 102 0 4 4 0 018 .001 1 1 0 002 0 6 6 0 00-6-6.001Z"></path>
+          </svg>
+          Comunidade
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 3H3a2 2 0 00-2 2v14a2 2 0 002 2h18a2 2 0 002-2V5a2 2 0 00-2-2ZM3 19V5h18v14H3Zm5-8H6a1 1 0 000 2h2a1 1 0 000-2Zm10 0h-6a1 1 0 000 2h6a1 1 0 000-2Zm0 4h-2a1 1 0 000 2h2a1 1 0 000-2Zm-6 0H6a1 1 0 000 2h6a1 1 0 000-2Z"></path>
+          </svg>
+          Legendas
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3ZM9.954 7.438a5 5 0 105.307 8.352 1 1 0 00-1.305-1.516 3 3 0 11.026-4.525 1 1 0 001.322-1.501 5 5 0 00-5.35-.81Z"></path>
+          </svg>
+          Detecção de conteúdo
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm0 2a1 1 0 00-1 1v1.104a3.5 3.5 0 00-1.435.656C8.886 8.3 8.5 9.09 8.5 10c0 .525.13 1.005.402 1.417.251.368.591.667.989.869.638.339 1.437.495 2.058.615l.109.022c.728.143 1.242.259 1.588.456.107.053.2.133.268.232.039.063.086.174.086.389 0 .2-.267 1-2 1-1.033 0-1.547-.303-1.788-.509a1.199 1.199 0 01-.274-.337 1 1 0 00-1.886.662L9 14.5l-.948.317.001.002.008.024c.055.143.123.281.203.413.175.283.394.537.648.753.478.41 1.156.765 2.088.915V18a1 1 0 002 0v-1.082c1.757-.299 3-1.394 3-2.918 0-.534-.125-1.022-.387-1.444a2.7 2.7 0 00-.978-.915c-.671-.383-1.512-.548-2.153-.673l-.04-.008c-.74-.145-1.258-.251-1.614-.439a.699.699 0 01-.258-.206c-.029-.045-.07-.13-.07-.315 0-.308.114-.518.31-.674C11.027 9.153 11.414 9 12 9c.463.006.917.133 1.316.368.167.095.323.206.468.331l.005.004.01.01a1 1 0 001.408-1.42L14.5 9l.706-.708-.011-.011-.017-.016-.054-.05A5 5 0 0013 7.115V6a1 1 0 00-1-1Z"></path>
+          </svg>
+          Ganhos
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="m18.266 1.107-.878 2.283-2.282.878a.25.25 0 000 .466l2.282.878.878 2.283a.25.25 0 00.467 0l.878-2.283 2.282-.878a.25.25 0 000-.466l-2.282-.878-.878-2.283a.25.25 0 00-.467 0Zm-11 0L6.388 3.39l-2.282.878a.25.25 0 000 .466l2.282.878.878 2.283a.25.25 0 00.467 0l.878-2.283 2.282-.878a.25.25 0 000-.466L8.611 3.39l-.878-2.283a.25.25 0 00-.467 0ZM11.9 7.864l-8.486 8.484a2 2 0 000 2.83l1.412 1.411a2 2 0 002.828 0l8.485-8.485a2 2 0 000-2.829l-1.41-1.411a2 2 0 00-2.829 0Zm-7.072 9.9 6.715-6.715 1.411 1.411-6.714 6.714-1.412-1.41Zm14.438-4.657-.878 2.283-2.282.878a.25.25 0 000 .466l2.282.878.878 2.283a.25.25 0 00.467 0l.878-2.283 2.282-.878a.25.25 0 000-.466l-2.282-.878-.878-2.283a.25.25 0 00-.467 0Z"></path>
+          </svg>
+          Personalização
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 2H8a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2ZM8 16V4h12v12H8Zm6-10.513v3.687a3 3 0 101.996 2.98L16 12V8.3l1.621.973A.25.25 0 0018 9.059V7.302a.5.5 0 00-.241-.428l-3-1.814a.5.5 0 00-.759.427ZM4 20V6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2H4Zm9-9a1 1 0 110 2 1 1 0 010-2Z"></path>
+          </svg>
+          Biblioteca de áudio
+        </a>
+
+      </div>
+
+      <!-- Bottom items -->
+      <div class="sidebar-bottom">
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.844 1h-1.687a2 2 0 00-1.962 1.616 3 3 0 01-3.92 2.263 2 2 0 00-2.38.891l-.842 1.46a2 2 0 00.417 2.507 3 3 0 010 4.525 2 2 0 00-.417 2.507l.843 1.46a2 2 0 002.38.892 3.001 3.001 0 013.918 2.263A2 2 0 0011.157 23h1.686a2 2 0 001.963-1.615 3.002 3.002 0 013.92-2.263 2 2 0 002.38-.892l.842-1.46a2 2 0 00-.418-2.507 3 3 0 010-4.526 2 2 0 00.418-2.508l-.843-1.46a2 2 0 00-2.38-.891 3 3 0 01-3.919-2.263A2 2 0 0012.844 1Zm-1.767 2.347a6 6 0 00.08-.347h1.687a4.98 4.98 0 002.407 3.37 4.98 4.98 0 004.122.4l.843 1.46A4.98 4.98 0 0018.5 12a4.98 4.98 0 001.716 3.77l-.843 1.46a4.98 4.98 0 00-4.123.4A4.979 4.979 0 0012.843 21h-1.686a4.98 4.98 0 00-2.408-3.371 4.999 4.999 0 00-4.12-.399l-.844-1.46A4.979 4.979 0 005.5 12a4.98 4.98 0 00-1.715-3.77l.842-1.459a4.98 4.98 0 004.123-.399 4.981 4.981 0 002.327-3.025ZM16 12a4 4 0 11-7.999 0 4 4 0 018 0Zm-4 2a2 2 0 100-4 2 2 0 000 4Z"></path>
+          </svg>
+          Configurações
+        </a>
+
+        <a href="#" class="sidebar-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 2H5a4 4 0 00-4 4v10a4 4 0 004 4h2v1.604a1.41 1.41 0 002.095 1.232L14.2 20H19a4 4 0 004-4V6a4 4 0 00-4-4ZM5 4h14a2 2 0 012 2v10a2 2 0 01-2 2h-5.318l-.453.252L9 20.6V18H5a2 2 0 01-2-2V6a2 2 0 012-2Zm7 2a1 1 0 00-1 1v4.5a1 1 0 002 0V7a1 1 0 00-1-1Zm0 7.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5Z"></path>
+          </svg>
+          Enviar feedback
+        </a>
+
+      </div>
+    </aside>
+
+    <!-- ══════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════ -->
+    <main class="main-content">
+      <div class="content-box">
+
+        <!-- Title row -->
+        <div class="title-row">
+          <h1>Estatísticas do canal</h1>
+          <button class="btn-avancado">Modo avançado</button>
+        </div>
+
+        <!-- Tab menu -->
+        <div class="stats-menu">
+          <a href="#" class="stats-item active">Visão geral</a>
+          <a href="#" class="stats-item">Conteúdo</a>
+          <a href="#" class="stats-item">Público</a>
+          <a href="#" class="stats-item">Receita</a>
+          <a href="#" class="stats-item">Tendências</a>
+        </div>
+
+        <!-- Summary text -->
+        <p style="margin-top: 20px; color: #fff; font-weight: bold; font-size: 27px; margin-left: 90px;">
+          Seu canal teve 1,000,000 visualizações nos últimos 28 dias
+        </p>
+
+        <!-- Cards row -->
+        <div style="display: flex; gap: 30px; margin-top: 40px; align-items: flex-start;">
+
+          <!-- ── Card 1: Stats + Chart ── -->
+          <div style="border: 1.8px solid #3e3e3e; border-radius: 20px; overflow: visible; min-height: 300px; width: 900px;">
+
+            <!-- Date filter -->
+            <div style="position: absolute; right: 5px; top: 50px; display: flex; align-items: center; gap: 8px;">
+              <div style="display: flex; gap: 0; margin-top: -10px;"></div>
+              <div style="margin-right: 40px; cursor: pointer;" onclick="toggleMenu()">
+                <p style="color: #aaaaaa; font-size: 13px; font-weight: normal;">
+                  1 de jan. - 4 de mai. de 2026
+                </p>
+                <div class="date-filter">
+                  <p onclick="toggleMenu()" style="color: #fff; font-size: 14px; font-weight: normal; margin-top: 4px; cursor: pointer;">
+                    Últimos 28 dias
+                  </p>
+                  <div class="date-menu" id="dateMenu">
+                    <div class="date-item">ㅤÚltimos 7 dias</div>
+                    <div class="date-item active">ㅤÚltimos 28 dias</div>
+                    <div class="date-item">ㅤÚltimos 90 dias</div>
+                    <div class="date-item">ㅤÚltimos 365 dias</div>
+                    <div class="date-item">ㅤTodo o período</div>
+                    <div class="date-item separator">ㅤ2026</div>
+                    <div class="date-item">ㅤ2025</div>
+                    <div class="date-item separator">ㅤmaio</div>
+                    <div class="date-item">ㅤabril</div>
+                    <div class="date-item">ㅤmarço</div>
+                    <div class="date-item separator">ㅤPersonalizado</div>
+                  </div>
+                </div>
+              </div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style="margin-left: 10px;">
+                <path d="M18.707 8.793a1 1 0 00-1.414 0L12 14.086 6.707 8.793a1 1 0 10-1.414 1.414L12 16.914l6.707-6.707a1 1 0 000-1.414Z"></path>
+              </svg>
+            </div>
+
+            <!-- Metric columns -->
+            <div style="display: flex; gap: 0; align-items: stretch;">
+
+              <!-- Views -->
+              <div style="flex: 1; border-right: 1px solid #3e3e3e; padding: 16px 24px; text-align: center; cursor: pointer;">
+                <p style="color: #aaaaaa; font-size: 13px; font-weight: bold;">Visualizações</p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
+                  <p style="color: #fff; font-size: 22px; font-weight: normal;">35.3M</p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#2ba640">
+                    <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm-5.207 9.793L12 5.586l5.207 5.207a1 1 0 11-1.414 1.414L13 9.414V17a1 1 0 01-2 0V9.414l-2.793 2.793a1 1 0 11-1.414-1.414Z"></path>
+                  </svg>
+                </div>
+                <p style="color: #aaaaaa; font-size: 11px; font-style: italic; margin-top: 4px;">44% a mais do que há 28 dias</p>
+              </div>
+
+              <!-- Watch time -->
+              <div style="flex: 1; border-right: 1px solid #3e3e3e; padding: 16px 24px; text-align: center; background: #1f1f1f; cursor: pointer;">
+                <p style="color: #aaaaaa; font-size: 13px; font-weight: bold;">Tempo de exibição (horas)</p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
+                  <p style="color: #fff; font-size: 22px; font-weight: normal;">2.9M</p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#2ba640">
+                    <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm-5.207 9.793L12 5.586l5.207 5.207a1 1 0 11-1.414 1.414L13 9.414V17a1 1 0 01-2 0V9.414l-2.793 2.793a1 1 0 11-1.414-1.414Z"></path>
+                  </svg>
+                </div>
+                <p style="color: #aaaaaa; font-size: 11px; font-style: italic; margin-top: 4px;">11% a mais do que há 28 dias</p>
+              </div>
+
+              <!-- Subscribers -->
+              <div style="flex: 1; border-right: 1px solid #3e3e3e; padding: 16px 24px; text-align: center; background: #1f1f1f; cursor: pointer;">
+                <p style="color: #aaaaaa; font-size: 13px; font-weight: bold;">Inscritos</p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
+                  <p style="color: #fff; font-size: 22px; font-weight: normal;">+100,522</p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#2ba640">
+                    <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm-5.207 9.793L12 5.586l5.207 5.207a1 1 0 11-1.414 1.414L13 9.414V17a1 1 0 01-2 0V9.414l-2.793 2.793a1 1 0 11-1.414-1.414Z"></path>
+                  </svg>
+                </div>
+                <p style="color: #aaaaaa; font-size: 11px; font-style: italic; margin-top: 4px;">44% a mais do que há 28 dias</p>
+              </div>
+
+              <!-- Revenue -->
+              <div style="flex: 1; padding: 16px 24px; text-align: center; background: #1f1f1f; border-radius: 0 18px 0 0; cursor: pointer;">
+                <p style="color: #aaaaaa; font-size: 13px; font-weight: bold;">Receita estimada</p>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
+                  <p style="color: #fff; font-size: 22px; font-weight: normal;">$224,500</p>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#2ba640">
+                    <path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm-5.207 9.793L12 5.586l5.207 5.207a1 1 0 11-1.414 1.414L13 9.414V17a1 1 0 01-2 0V9.414l-2.793 2.793a1 1 0 11-1.414-1.414Z"></path>
+                  </svg>
+                </div>
+                <p style="color: #aaaaaa; font-size: 11px; font-style: italic; margin-top: 4px;"></p>
+              </div>
+
+            </div>
+
+            <!-- Chart -->
+            <div style="padding: 24px 24px 16px; background: #282828; border-top: 1px solid #3e3e3e;">
+              <div style="position: relative; width: 100%; height: 150px; overflow: visible;">
+                <canvas id="viewsChart" style="overflow: visible;" role="img" aria-label="Gráfico de visualizações dos últimos 28 dias">Visualizações diárias ao longo dos últimos 28 dias.</canvas>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ── Card 2: Realtime ── -->
+          <div style="border: 1.8px solid #3e3e3e; border-radius: 20px; padding: 24px 24px 24px 18px; min-height: 400px; width: 300px; margin-top: -70px;">
+
+            <p style="color: #fff; font-size: 18px; font-weight: bold; margin-top: -10px;">Em tempo real</p>
+
+            <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
+              <div class="dot-wrap">
+                <div class="dot"></div>
+                <div class="dot-ring"></div>
+              </div>
+              <p style="color: #aaaaaa; font-size: 13px;">Atualizando</p>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid #3e3e3e; margin: 16px 0;" />
+
+            <p style="color: #fff; font-size: 18px; font-weight: bold;">10,000</p>
+            <p style="color: #aaaaaa; font-size: 13px; margin-top: 4px;">Inscritos</p>
+            <button class="btn-avancado" style="margin-top: 12px; font-weight: bold;">Ver contagem de inscritos ao vivo</button>
+
+            <hr style="border: none; border-top: 1px solid #3e3e3e; margin: 16px 0;" />
+
+            <p style="color: #fff; font-size: 18px; font-weight: bold;">10,000</p>
+            <p style="color: #aaaaaa; font-size: 13px; margin-top: 4px;">Visualizações · Últimas 48 horas</p>
+            <div style="width: 100%; height: 60px; margin-top: 12px;">
+              <canvas id="realtimeChart"></canvas>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 8px;">
+              <p style="color: #aaaaaa; font-size: 11px;">ㅤ48h atrás</p>
+              <p style="color: #aaaaaa; font-size: 11px;">Agora</p>
+            </div>
+            <button class="btn-avancado" style="margin-top: 12px; font-weight: bold;">Ver mais</button>
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
